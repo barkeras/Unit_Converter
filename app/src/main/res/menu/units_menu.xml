@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuLen" android:title="Len" android:visible="true"/>
+    <item android:id="@+id/menuIlbs" android:title="Ilbs" android:visible="true" />
+    <item android:id="@+id/menuTemp" android:title="Deg" android:visible="true" />
+    <item android:id="@+id/menuSpeed" android:title="MPH" android:visible="true" />
+    <item android:id="@+id/menuEnergy" android:title="ENG" android:visible="true" />
+    <item android:id="@+id/menuStorage" android:title="Stg" android:visible="true" />
+    <item android:id="@+id/menuTime" android:title="Time" android:visible="true" />
+    <item android:id="@+id/menuArea" android:title="Area" android:visible="true" />
+    <item android:id="@+id/menuFuel" android:title="Fuel" android:visible="true" />
+    <item android:id="@+id/menuVolume" android:title="Vol" android:visible="true" />
+    <item android:id="@+id/menuPressure" android:title="Pres" android:visible="true" />
+    <item android:id="@+id/menuMass" android:title="Mass" android:visible="true" />
+    <item android:id="@+id/menuAngle" android:title="Ang" android:visible="true" />
+    <item android:id="@+id/menuCurrency" android:title="Cur" android:visible="true" />
+    <item android:id="@+id/menuOhms" android:title="Ohm" android:visible="true" />
+    <item android:id="@+id/menuNumbers" android:title="Num" android:visible="true" />
+</menu>

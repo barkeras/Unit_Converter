@@ -1,0 +1,588 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.75">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fromTextView"
+                    android:text="From"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/ToFromTextSize"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fromInputText"
+                    android:text="123"
+                    android:layout_toRightOf="@id/fromTextView"
+                    android:gravity="right"
+                    android:editable="false"
+                    />
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fromSpinner"
+                    android:layout_below="@id/fromInputText"
+                    android:layout_alignParentBottom="true"
+                    android:entries="@array/len_units"
+                    android:gravity="right"
+                    android:textAlignment="gravity"></Spinner>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:background="@color/light_grey">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toTextView"
+                    android:text="To"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/ToFromTextSize"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toOutputText"
+                    android:text="0"
+                    android:layout_toRightOf="@id/toTextView"
+                    android:gravity="right"
+                    android:editable="false"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toSpinner"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/toOutputText"
+                    android:entries="@array/len_units"
+                    android:gravity="right"></Spinner>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/numbersLayout"
+                android:background="@color/dark_grey"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberSeven"
+                                    android:text="7"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize" />
+
+                            </com.andexert.library.RippleView>
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberFour"
+                                    android:text="4"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"
+                                    />
+                            </com.andexert.library.RippleView>
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberOne"
+                                    android:text="1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"/>
+                            </com.andexert.library.RippleView>
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberDecimal"
+                                    android:text="."
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"/>
+                            </com.andexert.library.RippleView>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberEight"
+                                    android:text="8"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"/>
+                            </com.andexert.library.RippleView>
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberFive"
+                                    android:text="5"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"/>
+                            </com.andexert.library.RippleView>
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberTwo"
+                                    android:text="2"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"/>
+                            </com.andexert.library.RippleView>
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberZero"
+                                    android:text="0"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"/>
+                            </com.andexert.library.RippleView>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberNine"
+                                    android:text="9"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"/>
+                            </com.andexert.library.RippleView>
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberSix"
+                                    android:text="6"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"/>
+                            </com.andexert.library.RippleView>
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/numberThree"
+                                    android:text="3"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"/>
+                            </com.andexert.library.RippleView>
+
+                            <com.andexert.library.RippleView
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/numbersSize"/>
+                            </com.andexert.library.RippleView>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:id="@+id/numberTools"
+                android:background="@color/light_blue">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"></RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"></RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.andexert.library.RippleView
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        app:rv_color="@color/black">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/numberDelete"
+                            android:text="DEL"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/numberToolsTextSize"/>
+                    </com.andexert.library.RippleView>
+
+                    <com.andexert.library.RippleView
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        app:rv_color="@color/black">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/numberPlusMinus"
+                            android:text="+/-"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/numberToolsTextSize"/>
+                    </com.andexert.library.RippleView>
+
+                    <com.andexert.library.RippleView
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        app:rv_color="@color/black">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/numberSwap"
+                            android:text="Sw"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/numberToolsTextSize"/>
+                    </com.andexert.library.RippleView>
+
+                    <com.andexert.library.RippleView
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        app:rv_color="@color/black">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/numberFavorite"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/numberToolsTextSize"/>
+                    </com.andexert.library.RippleView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.42"
+        android:background="@color/mint">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/unitTypesTextView"
+            android:text="Unit Types"
+            android:gravity="center"
+            android:textSize="@dimen/textViewToFromTextSize"
+            android:textStyle="bold"
+            />
+
+
+    </RelativeLayout>
+
+
+    <!--<SlidingDrawer-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/slider"-->
+    <!--android:layout_weight="2.6"-->
+    <!--android:handle="@id/slidingHandle"-->
+    <!--android:content="@id/unitTypes"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/slidingHandle"-->
+    <!--android:background="@color/mint"/>-->
+
+    <!--<GridLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/unitTypes"-->
+    <!--android:columnCount="4"-->
+    <!--android:rowCount="4"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:background="@color/mint">-->
+
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Len"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Ilbs"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Deg"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="MPH"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="ENG"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Stg"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Time"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Area"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Fuel"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Vol"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Pres"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Mass"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Ang"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Cur"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Ohms"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_columnWeight="1"-->
+    <!--android:layout_rowWeight="1"-->
+    <!--android:text="Num"-->
+    <!--/>-->
+
+    <!--</GridLayout>-->
+
+    <!--</SlidingDrawer>-->
+
+
+</LinearLayout>
